@@ -16,10 +16,20 @@ public class SortingRunnerTest {
 
     }
 
-    private void assert3ElementOrder(int[] numArray) {
-        assertEquals(5, numArray[0]);
-        assertEquals(7, numArray[1]);
-        assertEquals(19, numArray[2]);
+    @org.junit.Test
+    public void bubbleSort2ElementArray() throws Exception {
+        int[] orderedArray = {12, 8};
+        mySorter.sort(orderedArray);
+        assert2ElementOrder(orderedArray);
+
+        int[] scrambledArray1 = {8, 12};
+        mySorter.sort(scrambledArray1);
+        assert2ElementOrder(scrambledArray1);
+    }
+
+    private void assert2ElementOrder(int[] numArray) {
+        assertEquals(8, numArray[0]);
+        assertEquals(12, numArray[1]);
     }
 
     @org.junit.Test
@@ -47,6 +57,32 @@ public class SortingRunnerTest {
         int[] scrambledArray5 = {19, 5, 7};
         mySorter.sort(scrambledArray5);
         assert3ElementOrder(scrambledArray5);
+    }
+
+    private void assert3ElementOrder(int[] numArray) {
+        assertEquals(5, numArray[0]);
+        assertEquals(7, numArray[1]);
+        assertEquals(19, numArray[2]);
+    }
+
+    @org.junit.Test
+    public void bubbleSort4ElementArray() throws Exception {
+        int[] orderedArray = {10, 18, 6, 3};
+        mySorter.sort(orderedArray);
+        assertEquals(3, orderedArray[0]);
+        assertEquals(6, orderedArray[1]);
+        assertEquals(10, orderedArray[2]);
+        assertEquals(18, orderedArray[3]);
+    }
+
+    @org.junit.Test
+    public void bubbleSortArrayWithDuplicates() throws Exception {
+        int[] orderedArray = {10, 5, 9, 9};
+        mySorter.sort(orderedArray);
+        assertEquals(5, orderedArray[0]);
+        assertEquals(9, orderedArray[1]);
+        assertEquals(9, orderedArray[2]);
+        assertEquals(10, orderedArray[3]);
     }
 
 
