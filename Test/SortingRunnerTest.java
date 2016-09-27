@@ -4,7 +4,7 @@ import static org.junit.Assert.*;
  * Created by jessicatracy on 9/27/16.
  */
 public class SortingRunnerTest {
-    BubbleSorter mySorter = new BubbleSorter();
+    BaseSorter mySorter = new SelectionSorter();
 
     @org.junit.Before
     public void setUp() throws Exception {
