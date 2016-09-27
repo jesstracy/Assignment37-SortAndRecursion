@@ -94,5 +94,14 @@ public class SortingRunnerTest {
         assertEquals(40320, myRunner.getFactorial(8));
     }
 
+    @org.junit.Test
+    public void getFibTest() throws Exception {
+        assertEquals(1, myRunner.getFib(2));
+        assertEquals(2, myRunner.getFib(3));
+        assertEquals(3, myRunner.getFib(4));
+        assertEquals(5, myRunner.getFib(5));
+        assertEquals(55, myRunner.getFib(10));
+    }
+
 
 }

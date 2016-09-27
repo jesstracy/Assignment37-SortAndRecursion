@@ -16,11 +16,18 @@ public class RecursionRunner {
         return recursionTest(count + 1, max);
     }
 
-    public int getFactorial(int number) {
+    public long getFactorial(long number) {
         if (number == 1) {
             return number;
         }
         return number * getFactorial(number - 1);
+    }
+
+    public long getFib(long fibSeqNum) {
+        if (fibSeqNum == 0 || fibSeqNum == 1) {
+            return fibSeqNum;
+        }
+        return getFib(fibSeqNum - 1) + getFib(fibSeqNum - 2);
     }
 
 }
