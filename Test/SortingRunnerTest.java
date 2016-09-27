@@ -77,6 +77,16 @@ public class SortingRunnerTest {
     }
 
     @org.junit.Test
+    public void bubbleSort4ElementArray2() throws Exception {
+        int[] orderedArray = {6, 4, 2, 10};
+        mySorter.sort(orderedArray);
+        assertEquals(2, orderedArray[0]);
+        assertEquals(4, orderedArray[1]);
+        assertEquals(6, orderedArray[2]);
+        assertEquals(10, orderedArray[3]);
+    }
+
+    @org.junit.Test
     public void bubbleSortArrayWithDuplicates() throws Exception {
         int[] orderedArray = {10, 5, 9, 9};
         mySorter.sort(orderedArray);
@@ -96,10 +106,14 @@ public class SortingRunnerTest {
 
     @org.junit.Test
     public void getFibTest() throws Exception {
+        assertEquals(0, myRunner.getFib(0));
+        assertEquals(1, myRunner.getFib(1));
         assertEquals(1, myRunner.getFib(2));
         assertEquals(2, myRunner.getFib(3));
         assertEquals(3, myRunner.getFib(4));
         assertEquals(5, myRunner.getFib(5));
+        assertEquals(8, myRunner.getFib(6));
+        assertEquals(13, myRunner.getFib(7));
         assertEquals(55, myRunner.getFib(10));
     }
 
