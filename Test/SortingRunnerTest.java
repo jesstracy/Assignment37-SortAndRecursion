@@ -5,6 +5,7 @@ import static org.junit.Assert.*;
  */
 public class SortingRunnerTest {
     BaseSorter mySorter = new SelectionSorter();
+    RecursionRunner myRunner = new RecursionRunner();
 
     @org.junit.Before
     public void setUp() throws Exception {
@@ -83,6 +84,14 @@ public class SortingRunnerTest {
         assertEquals(9, orderedArray[1]);
         assertEquals(9, orderedArray[2]);
         assertEquals(10, orderedArray[3]);
+    }
+
+    @org.junit.Test
+    public void getFactorialTest() throws Exception {
+        assertEquals(2, myRunner.getFactorial(2));
+        assertEquals(6, myRunner.getFactorial(3));
+        assertEquals(120, myRunner.getFactorial(5));
+        assertEquals(40320, myRunner.getFactorial(8));
     }
 
 

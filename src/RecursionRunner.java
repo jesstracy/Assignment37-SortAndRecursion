@@ -16,4 +16,11 @@ public class RecursionRunner {
         return recursionTest(count + 1, max);
     }
 
+    public int getFactorial(int number) {
+        if (number == 1) {
+            return number;
+        }
+        return number * getFactorial(number - 1);
+    }
+
 }
